@@ -114,8 +114,9 @@
 
         /* Ajustes de color para que resalte sobre el fondo oscuro */
         h1 {
-            color: var(--color-texto-claro);
-            text-shadow: 0 0 10px var(--color-acento-morado);
+            /* CLAVE 1: Título más oscuro para mejor contraste */
+            color: #4B0082; /* Morado Oscuro Intenso */
+            text-shadow: 0 0 8px var(--color-texto-claro), 0 0 15px var(--color-acento-morado); /* Sombra blanca y morada */
         }
         
         /* Contraste Máximo */
@@ -127,25 +128,23 @@
             max-width: 650px;
         }
 
-        /* CLAVE: Fuente Cursiva para el texto de bienvenida */
-        .bienvenida-texto {
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.5em; /* Un poco más grande para que se aprecie la cursiva */
-            font-weight: 700; /* Negrita para que no se pierda el contraste */
-        }
-        
-        /* El texto inferior "musho amol" también en cursiva */
+        /* CLAVE 2: Estilo sutil para "Hecho con musho amol" */
         .contenedor p:last-child {
-            color: #555;
+            color: #9370DB; /* Morado sutil/claro */
             text-shadow: none;
             margin-top: 15px;
             margin-bottom: 0;
             font-family: 'Dancing Script', cursive;
-            font-size: 1.2em;
+            font-size: 1.1em; /* Un poco más pequeño y sutil */
             font-weight: 700;
         }
         
-        /* Quitamos la cursiva y la negrita extra a la pregunta */
+        .bienvenida-texto {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5em; 
+            font-weight: 700;
+        }
+        
         .contenedor p:nth-last-child(2) {
             margin-bottom: 15px;
             font-family: 'Arial', sans-serif;
