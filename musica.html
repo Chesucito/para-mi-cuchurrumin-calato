@@ -6,39 +6,59 @@
     <title>Metal y Ritmo | La Pasión</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Ajuste de fondo para esta sección: Negro para el mood metal */
         body {
             background-color: var(--color-fondo-oscuro); /* Negro */
             color: var(--color-texto-claro); /* Blanco */
         }
         h1 {
             color: var(--color-acento-morado); /* Título en Morado */
-            /* Puedes poner aquí un font-family más "rockero" si encuentras uno chido */
+            font-family: 'Metal Mania', cursive; /* Si encuentras una fuente rockera, úsala aquí */
+            text-shadow: 0 0 10px rgba(128, 0, 128, 0.7); /* Brillo metalero */
+        }
+        .ozzy-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
         }
         .ozzy-icon {
-            font-size: 3em;
-            margin-bottom: 20px;
+            font-size: 5em; /* Icono más grande */
+            margin-bottom: 15px;
             color: var(--color-acento-morado);
+            text-shadow: 0 0 8px var(--color-texto-claro);
+            animation: pulse 1.5s infinite alternate; /* Animación de pulso */
+        }
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
         }
         .cancion-embed {
             margin: 30px 0;
             max-width: 100%;
+            border: 3px solid var(--color-acento-morado); /* Borde al video */
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .p-metal {
+            font-style: italic;
+            max-width: 550px;
         }
     </style>
 </head>
 <body>
 
     <div class="contenedor">
-        <div class="ozzy-icon">🤘</div>
+        <div class="ozzy-section">
+            <div class="ozzy-icon">🤘</div>
+            <h1>Eres mi princesa de la tinieblas, que ama a Ozzy Osbourne</h1>
+        </div>
         
-        <h1>Eres mi princesa de la tinieblas, que ama a Ozzy Osbourne</h1>
-        
-        <p>Tu amor por el rock, el metal y los riffs pesados me encanta. Amo esa energía que pones en todo lo que haces, desde el primer acorde de Metallica hasta tu risa contagiosa.</p>
+        <p class="p-metal">Tu amor por el rock, el metal y los riffs pesados me encanta. Amo esa energía que pones en todo lo que haces, desde el primer acorde de Metallica hasta tu risa contagiosa y tu forma de ver la vida.</p>
 
-        <p>Y aunque la vida sea heavy, siempre encontramos el balance en nuestro ritmo. Esta canción es y será el latido de nuestro amor:</p>
+        <p class="p-metal">Y aunque la vida sea heavy, siempre encontramos el balance en nuestro ritmo. Esta canción es y será el latido de nuestro amor, la melodía que siempre nos une:</p>
 
         <div class="cancion-embed">
-            <iframe width="300" height="169" src="https://youtu.be/i_thSXwbqSg?si=lAr7UUmCBJpifRHd" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/i_thSXwbqSg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
 
         <a href="recuerdos.html" class="btn-navegacion">Ver Nuestros Recuerdos</a>
