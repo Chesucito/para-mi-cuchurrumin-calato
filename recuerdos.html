@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Galería | Tesoros</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Fondo neutro para que resalten las imágenes */
+        body {
+            background-color: #F8F8FF; /* Un blanco suave */
+            color: var(--color-fondo-oscuro);
+        }
+        h1 {
+            color: var(--color-acento-morado);
+        }
+        
+        /* Estilo Grid para la galería (funciona genial en móvil y PC) */
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 90%;
+            margin: 40px auto;
+        }
+        .item-recuerdo {
+            border: 5px solid var(--color-acento-morado); /* Borde cursi y detallado */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .item-recuerdo img, .item-recuerdo video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .caption {
+            padding: 10px;
+            font-style: italic;
+            font-size: 0.9em;
+            background-color: var(--color-acento-morado);
+            color: var(--color-texto-claro);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Nuestros Tesoros y Momentos Compartidos</h1>
+        
+        <p>Amo cada tontería y cada abrazo que compartimos, **mi cuchurrumin calato**. Esta es la prueba de nuestra locura:</p>
+
+        <div class="galeria-grid">
+            
+            <div class="item-recuerdo">
+                <img src="foto1.jpg" alt="Abrazo Fuerte">
+                <div class="caption">El mejor refugio: uno de nuestros abrazos fuertes.</div>
+            </div>
+            
+            <div class="item-recuerdo">
+                <video controls autoplay muted loop>
+                    <source src="video1.mp4" type="video/mp4">
+                    Tu navegador no soporta video.
+                </video>
+                <div class="caption">Cuando me grabaste acariciando a mi gatito. ¡Puro amor!</div>
+            </div>
+
+            </div>
+        
+        <a href="detalles.html" class="btn-navegacion">Mi Mayor Detalle</a>
+    </div>
+
+</body>
+</html>
