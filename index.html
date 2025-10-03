@@ -20,7 +20,6 @@
         /* CSS Base (Repetido en cada HTML) */
         /* ------------------------------------- */
         body {
-            /* Lora como fuente base y de títulos */
             font-family: 'Lora', serif; 
             margin: 0;
             padding: 0;
@@ -51,43 +50,15 @@
             margin-bottom: 5px; 
         }
 
-        .btn-navegacion {
-            display: inline-block;
-            padding: 12px 25px; 
-            margin-top: 20px; 
-            /* CLAVE 1: Color de fondo más claro y vibrante (Orchid) */
-            background-color: #DA70D6; 
-            color: var(--color-texto-claro);
-            text-decoration: none;
-            border-radius: 25px; 
-            /* CLAVE 2: Borde blanco para mayor limpieza y brillo */
-            border: 3px solid var(--color-texto-claro); 
-            font-weight: bold;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            /* Efecto neón usando el color del botón */
-            box-shadow: 0 0 10px #DA70D6, 0 0 20px rgba(218, 112, 214, 0.5); 
-        }
-
-        .btn-navegacion:hover {
-            /* Color más intenso al pasar el mouse (Medium Orchid) */
-            background-color: #BA55D3; 
-            color: var(--color-texto-claro);
-            transform: scale(1.05);
-            border-color: #BA55D3;
-            /* Brillo más intenso al pasar el mouse */
-            box-shadow: 0 0 15px #DA70D6, 0 0 30px #DA70D6, 0 0 50px rgba(218, 112, 214, 0.7);
-        }
+        /* QUITAMOS ESTILOS DEL BOTÓN, YA NO SE USA */
+        /* .btn-navegacion { ... } */
+        /* .btn-navegacion:hover { ... } */
         
         /* Media Query: Ajustes para Móviles */
         @media (max-width: 600px) {
             h1 { font-size: 2em; }
             p { font-size: 0.9em; }
-            .btn-navegacion {
-                padding: 10px 20px;
-                font-size: 0.9em;
-                margin-top: 15px;
-            }
+            /* .btn-navegacion { ... } */ /* Quitamos */
         }
 
         /* ------------------------------------- */
@@ -165,6 +136,37 @@
             margin-bottom: 10px;
             filter: drop-shadow(0 0 15px var(--color-acento-morado));
         }
+
+        /* ESTILOS DE LA PUERTA */
+        #puerta {
+            width: 180px; /* Tamaño de la puerta */
+            height: auto;
+            cursor: pointer;
+            margin-top: 25px; /* Espacio con el texto */
+            transition: transform 0.8s ease-in-out, filter 0.3s ease; /* Transición para la animación */
+            filter: drop-shadow(0 0 10px #DA70D6); /* Sombra inicial */
+        }
+
+        #puerta:hover {
+            filter: drop-shadow(0 0 15px #DA70D6) drop-shadow(0 0 30px #DA70D6); /* Brillo al pasar el mouse */
+        }
+
+        /* Clase para la animación de apertura */
+        #puerta.abriendo {
+            transform: rotateY(90deg) scale(0.8); /* Simula la apertura y se encoge un poco */
+            opacity: 0; /* Desaparece suavemente */
+        }
+
+        /* Mensaje del botón debajo de la puerta */
+        .mensaje-puerta {
+            font-family: 'Lora', serif;
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #BA55D3; /* Morado rosado */
+            margin-top: 10px;
+            text-shadow: 1px 1px 0px var(--color-texto-claro);
+        }
+
     </style>
 </head>
 <body>
@@ -178,12 +180,25 @@
             Mi vida, esta es una pequeña colección de detalles, sueños y el amor que compartimos. Cada página es un pedacito de nuestro universo, con la elegancia de los lirios y toda la música que nos une.
         </p>
         
-        <p style="font-weight: bold;">¿Estás lista para sumergirte en este viaje?</p>
+        <p style="font-weight: bold;">¿Lista para iniciar, mi niña?</p>
         
-        <a href="snoopy.html" class="btn-navegacion">Abre la Puerta a Nuestro Mundo</a>
+        <img id="puerta" src="https://i.ibb.co/L5r81r1/puerta-cerrada.png" alt="Puerta Cerrada">
+        <p class="mensaje-puerta">Abre la Puerta a Nuestro Mundo</p>
         
         <p>Hecho con musho amol</p>
     </div>
+
+    <script>
+        document.getElementById('puerta').addEventListener('click', function() {
+            const puerta = this;
+            puerta.classList.add('abriendo'); // Inicia la animación de apertura
+
+            // Redirige después de que la animación termine (0.8 segundos)
+            setTimeout(function() {
+                window.location.href = 'snoopy.html'; 
+            }, 800); // Coincide con la duración de la transición CSS
+        });
+    </script>
 
 </body>
 </html>
