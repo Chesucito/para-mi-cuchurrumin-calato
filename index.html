@@ -29,7 +29,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            /* CLAVE: min-height al 90% para dejar espacio para barras del navegador/sistema */
             min-height: 90vh; 
             padding: 10px 20px; 
             text-align: center;
@@ -38,40 +37,42 @@
         }
 
         h1 {
-            /* CLAVE: Fuente más pequeña para ahorrar espacio */
             font-size: 2.3em;
             text-transform: uppercase;
-            margin-bottom: 10px; /* Margen reducido */
+            margin-bottom: 10px;
         }
 
         p {
-            /* CLAVE: Fuente más pequeña para ahorrar espacio */
             font-size: 1em;
             max-width: 600px;
-            margin-bottom: 5px; /* Margen muy reducido */
+            margin-bottom: 5px; 
         }
 
         .btn-navegacion {
             display: inline-block;
             padding: 12px 25px; 
-            /* CLAVE: Margen superior reducido */
             margin-top: 20px; 
             background-color: var(--color-acento-morado);
             color: var(--color-texto-claro);
             text-decoration: none;
-            border-radius: 5px;
+            /* CLAVE 1: Bordes más redondeados para un toque más cursi */
+            border-radius: 25px; 
             border: 3px solid var(--color-fondo-oscuro);
             font-weight: bold;
             text-transform: uppercase;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            
+            /* CLAVE 2: Efecto de resplandor morado inicial */
+            box-shadow: 0 0 10px var(--color-acento-morado), 0 0 20px rgba(128, 0, 128, 0.5); 
         }
 
         .btn-navegacion:hover {
-            background-color: var(--color-fondo-oscuro);
-            color: var(--color-acento-morado);
+            background-color: #9932CC; /* Morado un poco más intenso al pasar */
+            color: var(--color-texto-claro);
             transform: scale(1.05);
-            border-color: var(--color-acento-morado);
+            border-color: #9932CC;
+            /* CLAVE 3: Brillo más intenso al pasar el mouse */
+            box-shadow: 0 0 15px #9932CC, 0 0 30px #9932CC, 0 0 50px rgba(128, 0, 128, 0.7);
         }
         
         /* Media Query: Ajustes para Móviles */
@@ -123,8 +124,8 @@
         .bienvenida-texto, .contenedor p {
             color: #000000; 
             text-shadow: 1px 1px 0px var(--color-texto-claro), -1px -1px 0px var(--color-texto-claro);
-            margin-bottom: 5px; /* Súper compacto */
-            font-size: 1em; /* Más pequeño */
+            margin-bottom: 5px; 
+            font-size: 1em; 
             max-width: 650px;
         }
         
@@ -132,15 +133,15 @@
         .contenedor p:last-child {
             color: #555;
             text-shadow: none;
-            margin-top: 15px; /* Súper compacto */
-            margin-bottom: 0; /* Lo más pegado al fondo posible */
+            margin-top: 15px;
+            margin-bottom: 0;
         }
         
         /* ESTILOS PARA EL NUEVO ICONO DE LIRIO */
         .intro-iconos img {
-            width: 100px; /* CLAVE: Icono más pequeño */
+            width: 100px; 
             height: auto;
-            margin-bottom: 10px; /* CLAVE: Margen más pequeño */
+            margin-bottom: 10px;
             filter: drop-shadow(0 0 15px var(--color-acento-morado));
         }
         /* Ajuste extra para el texto "¿Estás lista...?" */
