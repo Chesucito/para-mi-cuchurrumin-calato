@@ -5,16 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para Mi Cuchurrumin Calato | Inicio</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: var(--color-texto-claro); /* Fondo blanco */
+            color: var(--color-fondo-oscuro);
+        }
+        .bienvenida-texto {
+            margin-bottom: 30px;
+            font-size: 1.3em; /* Un poco más grande */
+            color: #555;
+        }
+        .iconos-decorativos {
+            font-size: 5em;
+            margin-bottom: 25px;
+            color: var(--color-acento-morado);
+            display: flex;
+            gap: 20px;
+        }
+        .iconos-decorativos span {
+            animation: bounce 2s infinite ease-in-out; /* Animación sutil */
+        }
+        .iconos-decorativos span:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
 </head>
 <body>
 
     <div class="contenedor">
+        <div class="iconos-decorativos">
+            <span>🌸</span>
+            <span>💖</span>
+            <span>🌿</span>
+        </div>
         <h1>🌹 Para Mi Amor, Mi Paz 💜</h1>
-        <p>Esta es una pequeña colección de detalles, sueños y el amor que compartimos, hecha solo para ti. Desliza o haz clic para empezar el viaje.</p>
+        <p class="bienvenida-texto">Esta es una pequeña colección de detalles, sueños y el amor que compartimos, hecha solo para ti, mi vida. Cada página es un pedacito de nuestro universo.</p>
         
-        <a href="snoopy.html" class="btn-navegacion">Abre la Puerta</a>
+        <p>¿Estás lista para sumergirte en este viaje?</p>
         
-        <p style="margin-top: 50px; font-size: 0.8em; color: #888;">Hecho con todo mi cariño.</p>
+        <a href="snoopy.html" class="btn-navegacion">Abre la Puerta a Nuestro Mundo</a>
+        
+        <p style="margin-top: 50px; font-size: 0.8em; color: #888;">Hecho con todo mi cariño, para mi **cuchurrumin calato**.</p>
     </div>
 
 </body>
