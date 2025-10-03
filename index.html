@@ -6,26 +6,42 @@
     <title>Para Mi Cuchurrumin Calato | Inicio</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* CSS ESPECÍFICO PARA EL FONDO ANIMADO */
         body {
-            background-color: var(--color-texto-claro); /* Fondo blanco */
-            color: var(--color-fondo-oscuro);
+            /* Colores base: Negro y Morado (más oscuro para elegancia) */
+            background: linear-gradient(-45deg, #1a1a1a, #4b0082, #1a1a1a, #800080);
+            background-size: 400% 400%;
+            animation: gradientAnimado 15s ease infinite; /* 15 segundos para que sea muy suave */
+            color: var(--color-texto-claro); /* Texto blanco para que resalte en el fondo oscuro */
+            min-height: 100vh; /* Asegura que cubra toda la pantalla */
+        }
+        
+        @keyframes gradientAnimado {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Ajustes para el texto sobre fondo oscuro */
+        h1 {
+            color: var(--color-texto-claro); /* Título en blanco */
+            text-shadow: 0 0 10px var(--color-acento-morado); /* Brillo morado para el toque detallado */
         }
         .bienvenida-texto {
+            color: #ccc; /* Un gris claro para el texto de bienvenida */
             margin-bottom: 30px;
             font-size: 1.3em;
-            color: #555;
-            max-width: 650px; /* Para que se vea más organizado */
+            max-width: 650px;
         }
         .iconos-decorativos {
             font-size: 5em;
             margin-bottom: 25px;
             color: var(--color-acento-morado);
             display: flex;
-            gap: 30px; /* Separamos un poco más los iconos */
+            gap: 30px;
         }
         .iconos-decorativos span {
-            /* Simbolizan los lirios, el capibara (círculo) y el amor */
-            filter: drop-shadow(0 0 5px rgba(128, 0, 128, 0.4));
+            filter: drop-shadow(0 0 5px var(--color-texto-claro));
             animation: bounce 2s infinite ease-in-out; 
         }
         .iconos-decorativos span:nth-child(2) {
@@ -43,14 +59,13 @@
     <div class="contenedor">
         <div class="iconos-decorativos">
             <span>💜</span>
-            <span>🌸</span>
-            <span>⭕</span> </div>
+            <span>🌸</span> <span>⭕</span> </div>
         <h1>🌹 Para Mi Amor, Mi Paz 💜</h1>
         <p class="bienvenida-texto">
             Esta es una pequeña colección de **detalles**, **sueños** y el **amor** que compartimos, hecha solo para ti, mi vida. Cada página es un pedacito de nuestro universo, con todos los **colores** y la **música** que nos une.
         </p>
         
-        <p style="font-weight: bold; font-size: 1.1em;">¿Estás lista para sumergirte en este viaje?</p>
+        <p style="font-weight: bold; font-size: 1.1em; color: var(--color-texto-claro);">¿Estás lista para sumergirte en este viaje?</p>
         
         <a href="snoopy.html" class="btn-navegacion">Abre la Puerta a Nuestro Mundo</a>
         
