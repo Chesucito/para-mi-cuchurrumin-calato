@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para mi Cuchurrumin Calato &lt;3</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
         /* Paleta de Colores Base */
@@ -20,7 +20,8 @@
         /* CSS Base (Repetido en cada HTML) */
         /* ------------------------------------- */
         body {
-            font-family: 'Arial', sans-serif; /* Fuente base legible */
+            /* CLAVE: Poppins como fuente base */
+            font-family: 'Poppins', sans-serif; 
             margin: 0;
             padding: 0;
             transition: background-color 0.8s ease, color 0.8s ease;
@@ -114,9 +115,8 @@
 
         /* Ajustes de color para que resalte sobre el fondo oscuro */
         h1 {
-            /* CLAVE 1: Título más oscuro para mejor contraste */
-            color: #4B0082; /* Morado Oscuro Intenso */
-            text-shadow: 0 0 8px var(--color-texto-claro), 0 0 15px var(--color-acento-morado); /* Sombra blanca y morada */
+            color: #4B0082;
+            text-shadow: 0 0 8px var(--color-texto-claro), 0 0 15px var(--color-acento-morado);
         }
         
         /* Contraste Máximo */
@@ -128,26 +128,28 @@
             max-width: 650px;
         }
 
-        /* CLAVE 2: Estilo sutil para "Hecho con musho amol" */
-        .contenedor p:last-child {
-            color: #9370DB; /* Morado sutil/claro */
-            text-shadow: none;
-            margin-top: 15px;
-            margin-bottom: 0;
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.1em; /* Un poco más pequeño y sutil */
-            font-weight: 700;
-        }
-        
+        /* Texto Cursivo (Dancing Script) */
         .bienvenida-texto {
             font-family: 'Dancing Script', cursive;
             font-size: 1.5em; 
             font-weight: 700;
         }
         
+        /* El texto inferior "musho amol" */
+        .contenedor p:last-child {
+            color: #9370DB;
+            text-shadow: none;
+            margin-top: 15px;
+            margin-bottom: 0;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.1em;
+            font-weight: 700;
+        }
+        
+        /* Pregunta (Poppins) */
         .contenedor p:nth-last-child(2) {
             margin-bottom: 15px;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-weight: bold;
             font-size: 1em;
         }
