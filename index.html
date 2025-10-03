@@ -130,17 +130,24 @@
             height: auto;
             cursor: pointer;
             margin-top: 25px; 
-            transition: transform 0.8s ease-in-out, filter 0.3s ease;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
             filter: drop-shadow(0 0 10px #DA70D6);
         }
 
         #puerta:hover {
             filter: drop-shadow(0 0 15px #DA70D6) drop-shadow(0 0 30px #DA70D6); 
         }
+        
+        /* Oculta la puerta mientras se abre, para que el cambio de imagen sea suave */
+        #puerta.oculta {
+            opacity: 0;
+            transform: scale(0.9); /* Pequeña escala para el efecto */
+        }
 
-        #puerta.abriendo {
-            transform: rotateY(90deg) scale(0.8);
-            opacity: 0; 
+        /* Estilos para la puerta una vez abierta (si fuera necesario un cambio visual) */
+        #puerta.abierta {
+             opacity: 1;
+             transform: scale(1);
         }
 
         .mensaje-puerta {
@@ -168,7 +175,7 @@
         <p style="font-weight: bold;">¿Lista para iniciar, mi niña?</p>
         
         
-        <img id="puerta" src="https://i.ibb.co/L5r81r1/puerta-cerrada.png" alt="Puerta Cerrada">
+        <img id="puerta" src="puerta-cerrada.png" alt="Puerta Cerrada">
         <p class="mensaje-puerta">Abre la Puerta a Nuestro Mundo</p>
         
         <p>Hecho con musho amol</p>
@@ -177,11 +184,18 @@
     <script>
         document.getElementById('puerta').addEventListener('click', function() {
             const puerta = this;
-            puerta.classList.add('abriendo');
+            puerta.classList.add('oculta'); // Inicia la transición para ocultar y encoger
 
             setTimeout(function() {
-                window.location.href = 'snoopy.html'; 
-            }, 800);
+                puerta.src = 'puerta-abierta.png'; // Cambia la imagen a la puerta abierta
+                puerta.classList.remove('oculta'); // Hace visible la puerta abierta
+                puerta.classList.add('abierta'); // Aplica cualquier estilo adicional de "abierta" si lo hubiera
+
+                // Redirige después de un breve momento para ver la puerta abierta
+                setTimeout(function() {
+                    window.location.href = 'snoopy.html'; 
+                }, 700); // Espera un poco para que se vea la puerta abierta
+            }, 500); // Espera a que la puerta cerrada se "oculte"
         });
     </script>
 
