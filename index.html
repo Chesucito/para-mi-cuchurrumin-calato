@@ -21,6 +21,7 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            /* La altura mínima ya no es 100vh para evitar el scroll forzado */
             transition: background-color 0.8s ease, color 0.8s ease;
         }
 
@@ -29,29 +30,33 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            /* CLAVE: Intentamos que todo quepa en el 95% de la altura disponible */
+            min-height: 95vh; 
+            padding: 10px 20px; /* Reducción de padding vertical */
             text-align: center;
             position: relative;
             z-index: 2; 
         }
 
         h1 {
-            font-size: 3em;
+            /* CLAVE: Fuente más pequeña para ahorrar espacio */
+            font-size: 2.5em;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 15px; /* Margen reducido */
         }
 
         p {
-            font-size: 1.2em;
+            /* CLAVE: Fuente más pequeña para ahorrar espacio */
+            font-size: 1.1em;
             max-width: 600px;
-            margin-bottom: 15px;
+            margin-bottom: 10px; /* Margen reducido */
         }
 
         .btn-navegacion {
             display: inline-block;
-            padding: 15px 30px;
-            margin-top: 40px;
+            padding: 12px 25px; /* Padding del botón reducido */
+            /* CLAVE: Margen superior reducido */
+            margin-top: 25px; 
             background-color: var(--color-acento-morado);
             color: var(--color-texto-claro);
             text-decoration: none;
@@ -72,16 +77,18 @@
         
         /* Media Query: Ajustes para Móviles */
         @media (max-width: 600px) {
+            /* Se mantiene el tamaño de fuente reducido para móviles */
             h1 { font-size: 2em; }
             p { font-size: 1em; }
             .btn-navegacion {
-                padding: 12px 25px;
+                padding: 10px 20px;
                 font-size: 0.9em;
+                margin-top: 20px;
             }
         }
 
         /* ------------------------------------- */
-        /* CSS Específico de index.html (Fondo de 3 Lirios Animado y PEQUEÑO) */
+        /* CSS Específico de index.html */
         /* ------------------------------------- */
 
         body::before {
@@ -118,22 +125,24 @@
         .bienvenida-texto, .contenedor p {
             color: #000000; 
             text-shadow: 1px 1px 0px var(--color-texto-claro), -1px -1px 0px var(--color-texto-claro);
-            margin-bottom: 30px;
-            font-size: 1.3em;
+            margin-bottom: 10px; /* Asegura un margen pequeño */
+            font-size: 1.1em; /* Reducido */
             max-width: 650px;
         }
+        
         /* El texto inferior, que debe ser sutil */
         .contenedor p:last-child {
             color: #555;
             text-shadow: none;
+            margin-top: 20px; /* Margen reducido */
         }
         
         /* ESTILOS PARA EL NUEVO ICONO DE LIRIO */
         .intro-iconos img {
-            width: 150px; /* Tamaño del lirio para que sea prominente */
+            width: 120px; /* Tamaño del lirio un poco más pequeño */
             height: auto;
-            margin-bottom: 25px;
-            filter: drop-shadow(0 0 15px var(--color-acento-morado)); /* Sombra morada elegante */
+            margin-bottom: 15px; /* Margen reducido */
+            filter: drop-shadow(0 0 15px var(--color-acento-morado));
         }
     </style>
 </head>
@@ -148,11 +157,11 @@
             Mi vida, esta es una pequeña colección de detalles, sueños y el amor que compartimos. Cada página es un pedacito de nuestro universo, con la elegancia de los lirios y toda la música que nos une.
         </p>
         
-        <p style="font-weight: bold; font-size: 1.1em;">¿Estás lista para sumergirte en este viaje?</p>
+        <p style="font-weight: bold;">¿Estás lista para sumergirte en este viaje?</p>
         
         <a href="snoopy.html" class="btn-navegacion">Abre la Puerta a Nuestro Mundo</a>
         
-        <p style="margin-top: 50px; font-size: 0.8em;">Hecho con musho amol</p>
+        <p>Hecho con musho amol</p>
     </div>
 
 </body>
