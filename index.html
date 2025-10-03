@@ -21,7 +21,6 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            /* La altura mínima ya no es 100vh para evitar el scroll forzado */
             transition: background-color 0.8s ease, color 0.8s ease;
         }
 
@@ -30,9 +29,9 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            /* CLAVE: Intentamos que todo quepa en el 95% de la altura disponible */
-            min-height: 95vh; 
-            padding: 10px 20px; /* Reducción de padding vertical */
+            /* CLAVE: min-height al 90% para dejar espacio para barras del navegador/sistema */
+            min-height: 90vh; 
+            padding: 10px 20px; 
             text-align: center;
             position: relative;
             z-index: 2; 
@@ -40,23 +39,23 @@
 
         h1 {
             /* CLAVE: Fuente más pequeña para ahorrar espacio */
-            font-size: 2.5em;
+            font-size: 2.3em;
             text-transform: uppercase;
-            margin-bottom: 15px; /* Margen reducido */
+            margin-bottom: 10px; /* Margen reducido */
         }
 
         p {
             /* CLAVE: Fuente más pequeña para ahorrar espacio */
-            font-size: 1.1em;
+            font-size: 1em;
             max-width: 600px;
-            margin-bottom: 10px; /* Margen reducido */
+            margin-bottom: 5px; /* Margen muy reducido */
         }
 
         .btn-navegacion {
             display: inline-block;
-            padding: 12px 25px; /* Padding del botón reducido */
+            padding: 12px 25px; 
             /* CLAVE: Margen superior reducido */
-            margin-top: 25px; 
+            margin-top: 20px; 
             background-color: var(--color-acento-morado);
             color: var(--color-texto-claro);
             text-decoration: none;
@@ -77,13 +76,12 @@
         
         /* Media Query: Ajustes para Móviles */
         @media (max-width: 600px) {
-            /* Se mantiene el tamaño de fuente reducido para móviles */
             h1 { font-size: 2em; }
-            p { font-size: 1em; }
+            p { font-size: 0.9em; }
             .btn-navegacion {
                 padding: 10px 20px;
                 font-size: 0.9em;
-                margin-top: 20px;
+                margin-top: 15px;
             }
         }
 
@@ -125,8 +123,8 @@
         .bienvenida-texto, .contenedor p {
             color: #000000; 
             text-shadow: 1px 1px 0px var(--color-texto-claro), -1px -1px 0px var(--color-texto-claro);
-            margin-bottom: 10px; /* Asegura un margen pequeño */
-            font-size: 1.1em; /* Reducido */
+            margin-bottom: 5px; /* Súper compacto */
+            font-size: 1em; /* Más pequeño */
             max-width: 650px;
         }
         
@@ -134,15 +132,20 @@
         .contenedor p:last-child {
             color: #555;
             text-shadow: none;
-            margin-top: 20px; /* Margen reducido */
+            margin-top: 15px; /* Súper compacto */
+            margin-bottom: 0; /* Lo más pegado al fondo posible */
         }
         
         /* ESTILOS PARA EL NUEVO ICONO DE LIRIO */
         .intro-iconos img {
-            width: 120px; /* Tamaño del lirio un poco más pequeño */
+            width: 100px; /* CLAVE: Icono más pequeño */
             height: auto;
-            margin-bottom: 15px; /* Margen reducido */
+            margin-bottom: 10px; /* CLAVE: Margen más pequeño */
             filter: drop-shadow(0 0 15px var(--color-acento-morado));
+        }
+        /* Ajuste extra para el texto "¿Estás lista...?" */
+        .contenedor p:nth-last-child(2) {
+            margin-bottom: 15px;
         }
     </style>
 </head>
