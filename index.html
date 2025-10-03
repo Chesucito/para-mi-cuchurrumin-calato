@@ -4,16 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para Mi Cuchurrumin Calato | Inicio</title>
-    <link rel="stylesheet" href="style.css">
     <style>
-        /* CSS ESPECÍFICO PARA EL FONDO ANIMADO */
+        /* Paleta de Colores Base */
+        :root {
+            --color-fondo-oscuro: #1A1A1A;
+            --color-acento-morado: #800080;
+            --color-texto-claro: #FFFFFF;
+            --color-fondo-claro-suave: #F8F8FF;
+        }
+
+        /* ------------------------------------- */
+        /* CSS Base (Antes en style.css) */
+        /* ------------------------------------- */
         body {
-            /* Colores base: Negro y Morado (más oscuro para elegancia) */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.8s ease, color 0.8s ease;
+            /* La animación de fondo ahora está en el CSS específico de esta página */
+        }
+
+        .contenedor {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin-bottom: 15px;
+        }
+
+        .btn-navegacion {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 40px;
+            background-color: var(--color-acento-morado);
+            color: var(--color-texto-claro);
+            text-decoration: none;
+            border-radius: 5px;
+            border: 3px solid var(--color-fondo-oscuro);
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-navegacion:hover {
+            background-color: var(--color-fondo-oscuro);
+            color: var(--color-acento-morado);
+            transform: scale(1.05);
+            border-color: var(--color-acento-morado);
+        }
+        
+        /* Media Query: Ajustes para Móviles */
+        @media (max-width: 600px) {
+            h1 { font-size: 2em; }
+            p { font-size: 1em; }
+            .btn-navegacion {
+                padding: 12px 25px;
+                font-size: 0.9em;
+            }
+        }
+        /* ------------------------------------- */
+        /* CSS Específico de index.html (Fondo Animado) */
+        /* ------------------------------------- */
+
+        body {
+            /* Fondo animado: Negro y Morado */
             background: linear-gradient(-45deg, #1a1a1a, #4b0082, #1a1a1a, #800080);
             background-size: 400% 400%;
-            animation: gradientAnimado 15s ease infinite; /* 15 segundos para que sea muy suave */
-            color: var(--color-texto-claro); /* Texto blanco para que resalte en el fondo oscuro */
-            min-height: 100vh; /* Asegura que cubra toda la pantalla */
+            animation: gradientAnimado 15s ease infinite; 
+            color: var(--color-texto-claro);
+            min-height: 100vh;
         }
         
         @keyframes gradientAnimado {
@@ -22,13 +96,13 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Ajustes para el texto sobre fondo oscuro */
+        /* Ajustes de color para que resalte sobre el fondo oscuro */
         h1 {
-            color: var(--color-texto-claro); /* Título en blanco */
-            text-shadow: 0 0 10px var(--color-acento-morado); /* Brillo morado para el toque detallado */
+            color: var(--color-texto-claro);
+            text-shadow: 0 0 10px var(--color-acento-morado);
         }
         .bienvenida-texto {
-            color: #ccc; /* Un gris claro para el texto de bienvenida */
+            color: #ccc;
             margin-bottom: 30px;
             font-size: 1.3em;
             max-width: 650px;
@@ -51,6 +125,7 @@
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
         }
     </style>
 </head>
@@ -59,7 +134,9 @@
     <div class="contenedor">
         <div class="iconos-decorativos">
             <span>💜</span>
-            <span>🌸</span> <span>⭕</span> </div>
+            <span>🌸</span> 
+            <span>⭕</span> 
+        </div>
         <h1>🌹 Para Mi Amor, Mi Paz 💜</h1>
         <p class="bienvenida-texto">
             Esta es una pequeña colección de **detalles**, **sueños** y el **amor** que compartimos, hecha solo para ti, mi vida. Cada página es un pedacito de nuestro universo, con todos los **colores** y la **música** que nos une.
