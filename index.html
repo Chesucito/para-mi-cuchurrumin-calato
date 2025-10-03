@@ -20,7 +20,7 @@
         /* CSS Base (Repetido en cada HTML) */
         /* ------------------------------------- */
         body {
-            /* CLAVE: Lora como fuente base y de títulos */
+            /* Lora como fuente base y de títulos */
             font-family: 'Lora', serif; 
             margin: 0;
             padding: 0;
@@ -55,23 +55,28 @@
             display: inline-block;
             padding: 12px 25px; 
             margin-top: 20px; 
-            background-color: var(--color-acento-morado);
+            /* CLAVE 1: Color de fondo más claro y vibrante (Orchid) */
+            background-color: #DA70D6; 
             color: var(--color-texto-claro);
             text-decoration: none;
             border-radius: 25px; 
-            border: 3px solid var(--color-fondo-oscuro);
+            /* CLAVE 2: Borde blanco para mayor limpieza y brillo */
+            border: 3px solid var(--color-texto-claro); 
             font-weight: bold;
             text-transform: uppercase;
             transition: all 0.3s ease;
-            box-shadow: 0 0 10px var(--color-acento-morado), 0 0 20px rgba(128, 0, 128, 0.5); 
+            /* Efecto neón usando el color del botón */
+            box-shadow: 0 0 10px #DA70D6, 0 0 20px rgba(218, 112, 214, 0.5); 
         }
 
         .btn-navegacion:hover {
-            background-color: #9932CC;
+            /* Color más intenso al pasar el mouse (Medium Orchid) */
+            background-color: #BA55D3; 
             color: var(--color-texto-claro);
             transform: scale(1.05);
-            border-color: #9932CC;
-            box-shadow: 0 0 15px #9932CC, 0 0 30px #9932CC, 0 0 50px rgba(128, 0, 128, 0.7);
+            border-color: #BA55D3;
+            /* Brillo más intenso al pasar el mouse */
+            box-shadow: 0 0 15px #DA70D6, 0 0 30px #DA70D6, 0 0 50px rgba(218, 112, 214, 0.7);
         }
         
         /* Media Query: Ajustes para Móviles */
@@ -115,9 +120,8 @@
 
         /* Ajustes de color para que resalte sobre el fondo oscuro */
         h1 {
-            /* CLAVE: Regresamos al blanco pero con un brillo potente */
             color: var(--color-texto-claro); 
-            text-shadow: 0 0 10px #FFD700, 0 0 20px var(--color-acento-morado), 0 0 30px var(--color-acento-morado); /* Neón Morado/Amarillo */
+            text-shadow: 0 0 10px #FFD700, 0 0 20px var(--color-acento-morado), 0 0 30px var(--color-acento-morado); 
         }
         
         /* Contraste Máximo */
@@ -129,10 +133,10 @@
             max-width: 650px;
         }
 
-        /* CLAVE: Texto Cursivo (Charm) */
+        /* Texto Cursivo (Charm) */
         .bienvenida-texto {
             font-family: 'Charm', cursive;
-            font-size: 1.8em; /* Más grande para que se aprecie el detalle */
+            font-size: 1.8em; 
             font-weight: 700;
         }
         
@@ -143,7 +147,7 @@
             margin-top: 15px;
             margin-bottom: 0;
             font-family: 'Charm', cursive;
-            font-size: 1.3em; /* Más grande */
+            font-size: 1.3em; 
             font-weight: 700;
         }
         
