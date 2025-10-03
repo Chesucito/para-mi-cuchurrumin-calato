@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Charm:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Paleta de Colores Base */
         :root {
             --color-fondo-oscuro: #1A1A1A;
             --color-acento-morado: #800080;
@@ -17,7 +16,7 @@
         }
 
         /* ------------------------------------- */
-        /* CSS Base (Repetido en cada HTML) */
+        /* CSS Base */
         /* ------------------------------------- */
         body {
             font-family: 'Lora', serif; 
@@ -49,16 +48,10 @@
             max-width: 600px;
             margin-bottom: 5px; 
         }
-
-        /* QUITAMOS ESTILOS DEL BOTÓN, YA NO SE USA */
-        /* .btn-navegacion { ... } */
-        /* .btn-navegacion:hover { ... } */
         
-        /* Media Query: Ajustes para Móviles */
         @media (max-width: 600px) {
             h1 { font-size: 2em; }
             p { font-size: 0.9em; }
-            /* .btn-navegacion { ... } */ /* Quitamos */
         }
 
         /* ------------------------------------- */
@@ -83,19 +76,16 @@
             animation: moverFondo 90s linear infinite; 
         }
         
-        /* La animación que mueve el fondo */
         @keyframes moverFondo {
             0% { background-position: 0% 0%, 50% 50%, 100% 100%; }
             100% { background-position: 100% 100%, 0% 0%, 50% 50%; } 
         }
 
-        /* Ajustes de color para que resalte sobre el fondo oscuro */
         h1 {
             color: var(--color-texto-claro); 
             text-shadow: 0 0 10px #FFD700, 0 0 20px var(--color-acento-morado), 0 0 30px var(--color-acento-morado); 
         }
         
-        /* Contraste Máximo */
         .bienvenida-texto, .contenedor p {
             color: #000000; 
             text-shadow: 1px 1px 0px var(--color-texto-claro), -1px -1px 0px var(--color-texto-claro);
@@ -104,14 +94,12 @@
             max-width: 650px;
         }
 
-        /* Texto Cursivo (Charm) */
         .bienvenida-texto {
             font-family: 'Charm', cursive;
             font-size: 1.8em; 
             font-weight: 700;
         }
         
-        /* El texto inferior "musho amol" */
         .contenedor p:last-child {
             color: #9370DB;
             text-shadow: none;
@@ -122,7 +110,6 @@
             font-weight: 700;
         }
         
-        /* Pregunta (Lora) */
         .contenedor p:nth-last-child(2) {
             margin-bottom: 15px;
             font-family: 'Lora', serif;
@@ -137,32 +124,30 @@
             filter: drop-shadow(0 0 15px var(--color-acento-morado));
         }
 
-        /* ESTILOS DE LA PUERTA */
+        /* Estilos de la puerta animada */
         #puerta {
-            width: 180px; /* Tamaño de la puerta */
+            width: 180px; 
             height: auto;
             cursor: pointer;
-            margin-top: 25px; /* Espacio con el texto */
-            transition: transform 0.8s ease-in-out, filter 0.3s ease; /* Transición para la animación */
-            filter: drop-shadow(0 0 10px #DA70D6); /* Sombra inicial */
+            margin-top: 25px; 
+            transition: transform 0.8s ease-in-out, filter 0.3s ease;
+            filter: drop-shadow(0 0 10px #DA70D6);
         }
 
         #puerta:hover {
-            filter: drop-shadow(0 0 15px #DA70D6) drop-shadow(0 0 30px #DA70D6); /* Brillo al pasar el mouse */
+            filter: drop-shadow(0 0 15px #DA70D6) drop-shadow(0 0 30px #DA70D6); 
         }
 
-        /* Clase para la animación de apertura */
         #puerta.abriendo {
-            transform: rotateY(90deg) scale(0.8); /* Simula la apertura y se encoge un poco */
-            opacity: 0; /* Desaparece suavemente */
+            transform: rotateY(90deg) scale(0.8);
+            opacity: 0; 
         }
 
-        /* Mensaje del botón debajo de la puerta */
         .mensaje-puerta {
             font-family: 'Lora', serif;
             font-weight: bold;
             font-size: 1.1em;
-            color: #BA55D3; /* Morado rosado */
+            color: #BA55D3;
             margin-top: 10px;
             text-shadow: 1px 1px 0px var(--color-texto-claro);
         }
@@ -182,6 +167,7 @@
         
         <p style="font-weight: bold;">¿Lista para iniciar, mi niña?</p>
         
+        
         <img id="puerta" src="https://i.ibb.co/L5r81r1/puerta-cerrada.png" alt="Puerta Cerrada">
         <p class="mensaje-puerta">Abre la Puerta a Nuestro Mundo</p>
         
@@ -191,12 +177,11 @@
     <script>
         document.getElementById('puerta').addEventListener('click', function() {
             const puerta = this;
-            puerta.classList.add('abriendo'); // Inicia la animación de apertura
+            puerta.classList.add('abriendo');
 
-            // Redirige después de que la animación termine (0.8 segundos)
             setTimeout(function() {
                 window.location.href = 'snoopy.html'; 
-            }, 800); // Coincide con la duración de la transición CSS
+            }, 800);
         });
     </script>
 
