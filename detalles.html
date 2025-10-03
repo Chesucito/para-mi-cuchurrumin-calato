@@ -8,7 +8,7 @@
     <style>
         /* Ajuste de fondo: Un color hueso/crema para simular un pergamino antiguo */
         body {
-            background-color: #FFFACD; /* Lemon Chiffon (se ve elegante y viejo) */
+            background-color: var(--color-fondo-pergamino); /* Usamos la variable nueva */
             color: var(--color-fondo-oscuro);
         }
         h1 {
@@ -16,7 +16,7 @@
             font-size: 2.5em;
         }
         .carta-contenido {
-            background-color: var(--color-texto-claro);
+            background-color: var(--color-texto-claro); /* Fondo blanco en la carta */
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -26,6 +26,7 @@
             /* Aquí puedes poner una fuente cursiva y romántica si la encuentras */
             font-family: 'Times New Roman', serif;
             line-height: 1.6;
+            transition: all 0.5s ease;
         }
         .lista-detalles {
             margin-top: 30px;
@@ -34,6 +35,14 @@
         .lista-detalles li {
             color: var(--color-acento-morado);
             margin-bottom: 10px;
+            font-weight: bold; /* Un toque más de detalle */
+        }
+        /* Ajuste responsive para la carta */
+        @media (max-width: 768px) {
+            .carta-contenido {
+                margin: 10px;
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -43,26 +52,26 @@
         <h1>Una Carta Solo Para Ti, Mi Amor</h1>
         
         <div class="carta-contenido">
-            <p><strong>[Fecha]</strong></p>
-            <p>Mi amor, mi vida, mi... bueno, **mi cuchurrumin calato**, te escribo esto porque no hay palabras que alcancen para describir lo que siento. Desde el día que te conocí, mi vida se llenó de morado, de la suavidad de un capibara y la dulzura de un Snoopy... pero con un *soundtrack* de Ozzy de fondo.</p>
+            <p><strong>[Fecha y Hora]</strong></p>
+            <p>Mi amor, mi vida, mi... **mi cuchurrumin calato**, te escribo esto porque no hay palabras que alcancen para describir lo que siento. Desde el día que te conocí, mi vida se llenó de **morado**, de la suavidad de un **capibara** y la dulzura de un **Snoopy**... pero con un *soundtrack* de **Ozzy** de fondo.</p>
             
-            <p>Cada detalle que pones en lo que haces me inspira a ser mejor. Este sitio web es solo una pequeña muestra del universo que has creado en mi corazón, un lugar donde lo cursi y el metal conviven en perfecta armonía. Por favor, tómate tu tiempo para leer esto...</p>
+            <p>Cada detalle que pones en lo que haces me inspira a ser mejor. Este sitio web es solo una pequeña muestra del universo que has creado en mi corazón, un lugar donde lo cursi y el metal conviven en perfecta armonía. Por favor, tómate tu tiempo para leer esto, porque cada palabra está pensada solo en ti...</p>
             
             <br>
             <hr style="border-color: var(--color-acento-morado);">
             
-            <h2>Mis 100 Cosas Favoritas de Ti (¡Empezando!)</h2>
+            <h2>Mis Cosas Favoritas de Ti</h2>
             
             <ol class="lista-detalles">
-                <li>Amo cómo te brillan los ojos cuando hablas de tus futuros alumnos.</li>
-                <li>La forma en que cantas las canciones de Ozzy, aunque no te sepas la letra.</li>
-                <li>Tu pasión por los gatos (y esa paciencia infinita).</li>
-                <li>Cuando te sientas en mis piernas y siento que el mundo se detiene.</li>
-                <li>La risa que solo sacas cuando hacemos las tonterías más grandes en casa.</li>
+                <li>Amo cómo te brillan los ojos cuando hablas de tus futuros alumnos, esa pasión de **profesora de inicial** me derrite.</li>
+                <li>Tu amor por los **lirios**, tan elegantes y a la vez tan sencillos, como tú.</li>
+                <li>La risa que solo sacas cuando hacemos las **tonterías** más grandes en casa.</li>
+                <li>El momento exacto en el **Video2** cuando te sientas en mis **piernas** y me llenas de besitos.</li>
+                <li>Que tu artista favorito sea el gran **Ozzy Osbourne**, porque me enseña lo fuerte que eres.</li>
                 </ol>
             
-            <p style="text-align: right;">Con todo mi amor,</p>
-            <p style="text-align: right;">Tu [Tu Apodo, si tienes uno]</p>
+            <p style="text-align: right; margin-top: 30px;">Con todo mi amor,</p>
+            <p style="text-align: right;">Tu [Tu Apodo o Nombre]</p>
             </div>
         
         <a href="final.html" class="btn-navegacion">Nuestro Futuro Juntos</a>
