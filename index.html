@@ -12,18 +12,21 @@
         }
         .bienvenida-texto {
             margin-bottom: 30px;
-            font-size: 1.3em; /* Un poco más grande */
+            font-size: 1.3em;
             color: #555;
+            max-width: 650px; /* Para que se vea más organizado */
         }
         .iconos-decorativos {
             font-size: 5em;
             margin-bottom: 25px;
             color: var(--color-acento-morado);
             display: flex;
-            gap: 20px;
+            gap: 30px; /* Separamos un poco más los iconos */
         }
         .iconos-decorativos span {
-            animation: bounce 2s infinite ease-in-out; /* Animación sutil */
+            /* Simbolizan los lirios, el capibara (círculo) y el amor */
+            filter: drop-shadow(0 0 5px rgba(128, 0, 128, 0.4));
+            animation: bounce 2s infinite ease-in-out; 
         }
         .iconos-decorativos span:nth-child(2) {
             animation-delay: 0.5s;
@@ -39,14 +42,15 @@
 
     <div class="contenedor">
         <div class="iconos-decorativos">
+            <span>💜</span>
             <span>🌸</span>
-            <span>💖</span>
-            <span>🌿</span>
-        </div>
+            <span>⭕</span> </div>
         <h1>🌹 Para Mi Amor, Mi Paz 💜</h1>
-        <p class="bienvenida-texto">Esta es una pequeña colección de detalles, sueños y el amor que compartimos, hecha solo para ti, mi vida. Cada página es un pedacito de nuestro universo.</p>
+        <p class="bienvenida-texto">
+            Esta es una pequeña colección de **detalles**, **sueños** y el **amor** que compartimos, hecha solo para ti, mi vida. Cada página es un pedacito de nuestro universo, con todos los **colores** y la **música** que nos une.
+        </p>
         
-        <p>¿Estás lista para sumergirte en este viaje?</p>
+        <p style="font-weight: bold; font-size: 1.1em;">¿Estás lista para sumergirte en este viaje?</p>
         
         <a href="snoopy.html" class="btn-navegacion">Abre la Puerta a Nuestro Mundo</a>
         
