@@ -27,17 +27,19 @@
             border: 5px solid var(--color-acento-morado); /* Borde cursi y detallado */
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            /* Aseguramos que el video tenga la altura bien definida en móvil */
+            min-height: 200px; 
         }
-        .item-recuerdo img, .item-recuerdo video {
+        .item-recuerdo video {
             width: 100%;
             height: auto;
             display: block;
         }
         .caption {
-            padding: 10px;
+            padding: 15px 10px; /* Más padding para que se vea más detallado */
             font-style: italic;
-            font-size: 0.9em;
+            font-size: 1em; /* Un poco más grande para móvil */
             background-color: var(--color-acento-morado);
             color: var(--color-texto-claro);
         }
@@ -48,24 +50,67 @@
     <div class="contenedor">
         <h1>Nuestros Tesoros y Momentos Compartidos</h1>
         
-        <p>Amo cada tontería y cada abrazo que compartimos, **mi cuchurrumin calato**. Esta es la prueba de nuestra locura:</p>
+        <p>Amo cada tontería, beso y risa que me regalas, **mi cuchurrumin calato**. Esta es la prueba de nuestra locura:</p>
 
         <div class="galeria-grid">
             
             <div class="item-recuerdo">
-                <img src="foto1.jpg" alt="Abrazo Fuerte">
-                <div class="caption">El mejor refugio: uno de nuestros abrazos fuertes.</div>
+                <video controls autoplay muted loop>
+                    <source src="Video.mp4" type="video/mp4">
+                    Tu navegador no soporta video.
+                </video>
+                <div class="caption">Nuestra forma romántica de decirnos "te quiero" mientras hacemos TikToks. ¡Siempre con tonterías!</div>
             </div>
             
             <div class="item-recuerdo">
                 <video controls autoplay muted loop>
-                    <source src="video1.mp4" type="video/mp4">
+                    <source src="Video2.mp4" type="video/mp4">
                     Tu navegador no soporta video.
                 </video>
-                <div class="caption">Cuando me grabaste acariciando a mi gatito. ¡Puro amor!</div>
+                <div class="caption">Ella en mis piernas, el lugar más seguro del mundo, llenándome de besitos.</div>
             </div>
 
+            <div class="item-recuerdo">
+                <video controls autoplay muted loop>
+                    <source src="Video3.mp4" type="video/mp4">
+                    Tu navegador no soporta video.
+                </video>
+                <div class="caption">Cuando te cargo sin esfuerzo porque el amor me da la fuerza de un Hércules. 😉</div>
             </div>
+
+            <div class="item-recuerdo">
+                <video controls autoplay muted loop>
+                    <source src="Video4.mp4" type="video/mp4">
+                    Tu navegador no soporta video.
+                </video>
+                <div class="caption">Aquí costó un poco, pero lo logramos. Siempre juntos, superando la gravedad.</div>
+            </div>
+            
+            <div class="item-recuerdo">
+                <video controls autoplay muted loop>
+                    <source src="Video5.mp4" type="video/mp4">
+                    Tu navegador no soporta video.
+                </video>
+                <div class="caption">Amo besarte, sin importar si tenemos cara de perro, capibara o Ozzy Osbourne.</div>
+            </div>
+            
+            <div class="item-recuerdo">
+                <video controls autoplay muted loop>
+                    <source src="Video7.mp4" type="video/mp4">
+                    Tu navegador no soporta video.
+                </video>
+                <div class="caption">Nuestro vals mareado de TikTok. Bailando hasta que se nos va la cabeza, y siempre terminamos en un beso.</div>
+            </div>
+
+            <div class="item-recuerdo">
+                <video controls autoplay muted loop>
+                    <source src="Video8.mp4" type="video/mp4">
+                    Tu navegador no soporta video.
+                </video>
+                <div class="caption">El recuerdo de esa vez que te dejé tirada en el piso y no pudimos parar de reír. Esas son las tonterías que atesoro.</div>
+            </div>
+            
+        </div>
         
         <a href="detalles.html" class="btn-navegacion">Mi Mayor Detalle</a>
     </div>
