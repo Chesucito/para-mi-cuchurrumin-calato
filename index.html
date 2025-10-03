@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para mi Cuchurrumin Calato &lt;3</title>
     
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
         /* Paleta de Colores Base */
         :root {
@@ -18,7 +20,7 @@
         /* CSS Base (Repetido en cada HTML) */
         /* ------------------------------------- */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Arial', sans-serif; /* Fuente base legible */
             margin: 0;
             padding: 0;
             transition: background-color 0.8s ease, color 0.8s ease;
@@ -55,23 +57,19 @@
             background-color: var(--color-acento-morado);
             color: var(--color-texto-claro);
             text-decoration: none;
-            /* CLAVE 1: Bordes más redondeados para un toque más cursi */
             border-radius: 25px; 
             border: 3px solid var(--color-fondo-oscuro);
             font-weight: bold;
             text-transform: uppercase;
             transition: all 0.3s ease;
-            
-            /* CLAVE 2: Efecto de resplandor morado inicial */
             box-shadow: 0 0 10px var(--color-acento-morado), 0 0 20px rgba(128, 0, 128, 0.5); 
         }
 
         .btn-navegacion:hover {
-            background-color: #9932CC; /* Morado un poco más intenso al pasar */
+            background-color: #9932CC;
             color: var(--color-texto-claro);
             transform: scale(1.05);
             border-color: #9932CC;
-            /* CLAVE 3: Brillo más intenso al pasar el mouse */
             box-shadow: 0 0 15px #9932CC, 0 0 30px #9932CC, 0 0 50px rgba(128, 0, 128, 0.7);
         }
         
@@ -128,25 +126,38 @@
             font-size: 1em; 
             max-width: 650px;
         }
+
+        /* CLAVE: Fuente Cursiva para el texto de bienvenida */
+        .bienvenida-texto {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5em; /* Un poco más grande para que se aprecie la cursiva */
+            font-weight: 700; /* Negrita para que no se pierda el contraste */
+        }
         
-        /* El texto inferior, que debe ser sutil */
+        /* El texto inferior "musho amol" también en cursiva */
         .contenedor p:last-child {
             color: #555;
             text-shadow: none;
             margin-top: 15px;
             margin-bottom: 0;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.2em;
+            font-weight: 700;
         }
         
-        /* ESTILOS PARA EL NUEVO ICONO DE LIRIO */
+        /* Quitamos la cursiva y la negrita extra a la pregunta */
+        .contenedor p:nth-last-child(2) {
+            margin-bottom: 15px;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        
         .intro-iconos img {
-            width: 100px; 
+            width: 100px;
             height: auto;
             margin-bottom: 10px;
             filter: drop-shadow(0 0 15px var(--color-acento-morado));
-        }
-        /* Ajuste extra para el texto "¿Estás lista...?" */
-        .contenedor p:nth-last-child(2) {
-            margin-bottom: 15px;
         }
     </style>
 </head>
