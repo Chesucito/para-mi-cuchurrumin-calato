@@ -53,7 +53,7 @@
             padding: 15px 30px;
             margin-top: 40px;
             background-color: var(--color-acento-morado);
-            color: var(--color-texto-claro); /* Se mantiene blanco */
+            color: var(--color-texto-claro);
             text-decoration: none;
             border-radius: 5px;
             border: 3px solid var(--color-fondo-oscuro);
@@ -81,7 +81,7 @@
         }
 
         /* ------------------------------------- */
-        /* CSS Específico de index.html (Fondo de 3 Lirios Animado y PEQUEÑO) */
+        /* CSS Específico de index.html (Contraste Máximo) */
         /* ------------------------------------- */
 
         body::before {
@@ -110,28 +110,29 @@
 
         /* Ajustes de color para que resalte sobre el fondo oscuro */
         h1 {
-            color: var(--color-texto-claro); /* Título CLARO con sombra MORADA */
+            color: var(--color-texto-claro); /* Título BLANCO */
             text-shadow: 0 0 10px var(--color-acento-morado);
         }
+        
+        /* ¡CLAVE: Texto principal y párrafos en NEGRO PURO con SOMBRA BLANCA! */
         .bienvenida-texto, .contenedor p {
-            color: var(--color-fondo-oscuro); /* Texto principal AHORA ES OSCURO */
+            color: #000000; /* NEGRO PURO */
+            text-shadow: 1px 1px 0px var(--color-texto-claro), -1px -1px 0px var(--color-texto-claro); /* Sombra blanca sutil */
             margin-bottom: 30px;
             font-size: 1.3em;
             max-width: 650px;
         }
-        /* Corrigiendo el color del texto de la intro */
-        .bienvenida-texto {
-            color: var(--color-fondo-oscuro); /* Negro */
+        /* El texto inferior, que debe ser sutil */
+        .contenedor p:last-child {
+            color: #555; /* Mantenemos un gris oscuro sutil para el crédito */
+            text-shadow: none; /* Quitamos la sombra aquí */
         }
+        
         .intro-iconos {
             font-size: 5em;
             margin-bottom: 25px;
             color: var(--color-texto-claro);
             text-shadow: 0 0 15px var(--color-acento-morado);
-        }
-        /* El texto inferior, más sutil */
-        .contenedor p:last-child {
-            color: #555; 
         }
     </style>
 </head>
