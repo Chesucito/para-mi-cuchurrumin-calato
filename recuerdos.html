@@ -8,7 +8,7 @@
     <style>
         /* Fondo neutro para que resalten las imágenes */
         body {
-            background-color: #F8F8FF; /* Un blanco suave */
+            background-color: var(--color-fondo-claro-suave); /* Usamos el blanco roto del CSS principal */
             color: var(--color-fondo-oscuro);
         }
         h1 {
@@ -18,30 +18,35 @@
         /* Estilo Grid para la galería (funciona genial en móvil y PC) */
         .galeria-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajustado para más espacio en móvil */
+            gap: 25px; /* Más espacio entre ítems */
             width: 90%;
             margin: 40px auto;
+            max-width: 1000px; /* Ancho máximo para que no se estire demasiado en pantallas grandes */
         }
         .item-recuerdo {
             border: 5px solid var(--color-acento-morado); /* Borde cursi y detallado */
-            border-radius: 10px;
+            border-radius: 15px; /* Bordes más suaves */
             overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            /* Aseguramos que el video tenga la altura bien definida en móvil */
-            min-height: 200px; 
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto al pasar el ratón */
         }
-        .item-recuerdo video {
+        .item-recuerdo:hover {
+            transform: translateY(-5px); /* Pequeño levantamiento */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+        }
+        .item-recuerdo img, .item-recuerdo video {
             width: 100%;
             height: auto;
             display: block;
         }
         .caption {
-            padding: 15px 10px; /* Más padding para que se vea más detallado */
+            padding: 15px 10px;
             font-style: italic;
-            font-size: 1em; /* Un poco más grande para móvil */
+            font-size: 1em;
             background-color: var(--color-acento-morado);
             color: var(--color-texto-claro);
+            font-weight: 500; /* Un poco más de grosor para la letra */
         }
     </style>
 </head>
@@ -50,9 +55,19 @@
     <div class="contenedor">
         <h1>Nuestros Tesoros y Momentos Compartidos</h1>
         
-        <p>Amo cada tontería, beso y risa que me regalas, **mi cuchurrumin calato**. Esta es la prueba de nuestra locura:</p>
+        <p class="introduccion-galeria">Amo cada tontería, beso y risa que me regalas, **mi cuchurrumin calato**. Esta es la prueba de nuestra locura, ¡y el inicio de muchos más recuerdos juntos!.</p>
 
         <div class="galeria-grid">
+            
+            <div class="item-recuerdo">
+                <img src="Foto1.jpg" alt="Nosotros de Niñitos (IA)">
+                <div class="caption">¡Nosotros, de niñitos! Un amor predestinado, incluso en versiones IA. 😍</div>
+            </div>
+
+            <div class="item-recuerdo">
+                <img src="Foto2.jpg" alt="Medias de Patitas de Pollo">
+                <div class="caption">¡Haciendo *match* con nuestras medias de patitas de pollo! Pequeños detalles, grandes amores. 🐔❤️</div>
+            </div>
             
             <div class="item-recuerdo">
                 <video controls autoplay muted loop>
@@ -83,7 +98,7 @@
                     <source src="Video4.mp4" type="video/mp4">
                     Tu navegador no soporta video.
                 </video>
-                <div class="caption">Aquí costó un poco, pero lo logramos. Siempre juntos, superando la gravedad.</div>
+                <div class="caption">Aquí costó un poco, ¡pero lo logramos! Siempre juntos, superando la gravedad. 💪</div>
             </div>
             
             <div class="item-recuerdo">
@@ -91,7 +106,7 @@
                     <source src="Video5.mp4" type="video/mp4">
                     Tu navegador no soporta video.
                 </video>
-                <div class="caption">Amo besarte, sin importar si tenemos cara de perro, capibara o Ozzy Osbourne.</div>
+                <div class="caption">Amo besarte, sin importar si tenemos cara de perro, capibara o Ozzy Osbourne. 😅</div>
             </div>
             
             <div class="item-recuerdo">
@@ -99,7 +114,7 @@
                     <source src="Video7.mp4" type="video/mp4">
                     Tu navegador no soporta video.
                 </video>
-                <div class="caption">Nuestro vals mareado de TikTok. Bailando hasta que se nos va la cabeza, y siempre terminamos en un beso.</div>
+                <div class="caption">Nuestro vals mareado de TikTok. Bailando hasta que se nos va la cabeza, y siempre terminamos en un beso. 💫</div>
             </div>
 
             <div class="item-recuerdo">
@@ -107,7 +122,7 @@
                     <source src="Video8.mp4" type="video/mp4">
                     Tu navegador no soporta video.
                 </video>
-                <div class="caption">El recuerdo de esa vez que te dejé tirada en el piso y no pudimos parar de reír. Esas son las tonterías que atesoro.</div>
+                <div class="caption">El recuerdo de esa vez que te dejé tirada en el piso y no pudimos parar de reír. Esas son las tonterías que atesoro. 😂</div>
             </div>
             
         </div>
