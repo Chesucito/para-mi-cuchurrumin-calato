@@ -38,7 +38,8 @@
         }
 
         h1 {
-            font-size: 2.3em;
+            /* Título más grande */
+            font-size: 2.6em; 
             text-transform: uppercase;
             margin-bottom: 10px;
         }
@@ -96,7 +97,8 @@
 
         .bienvenida-texto {
             font-family: 'Charm', cursive;
-            font-size: 1.8em; 
+            /* Texto cursiva más grande */
+            font-size: 2em; 
             font-weight: 700;
         }
         
@@ -118,7 +120,8 @@
         }
         
         .intro-iconos img {
-            width: 100px;
+            /* Icono Lirio más grande */
+            width: 120px; 
             height: auto;
             margin-bottom: 10px;
             filter: drop-shadow(0 0 15px var(--color-acento-morado));
@@ -126,7 +129,8 @@
 
         /* Estilos de la puerta animada */
         #puerta {
-            width: 180px; 
+            /* Puerta más grande */
+            width: 220px; 
             height: auto;
             cursor: pointer;
             margin-top: 25px; 
@@ -138,13 +142,11 @@
             filter: drop-shadow(0 0 15px #DA70D6) drop-shadow(0 0 30px #DA70D6); 
         }
         
-        /* Oculta la puerta mientras se abre, para que el cambio de imagen sea suave */
         #puerta.oculta {
             opacity: 0;
-            transform: scale(0.9); /* Pequeña escala para el efecto */
+            transform: scale(0.9);
         }
 
-        /* Estilos para la puerta una vez abierta (si fuera necesario un cambio visual) */
         #puerta.abierta {
              opacity: 1;
              transform: scale(1);
@@ -184,18 +186,17 @@
     <script>
         document.getElementById('puerta').addEventListener('click', function() {
             const puerta = this;
-            puerta.classList.add('oculta'); // Inicia la transición para ocultar y encoger
+            puerta.classList.add('oculta');
 
             setTimeout(function() {
-                puerta.src = 'puerta-abierta.png'; // Cambia la imagen a la puerta abierta
-                puerta.classList.remove('oculta'); // Hace visible la puerta abierta
-                puerta.classList.add('abierta'); // Aplica cualquier estilo adicional de "abierta" si lo hubiera
+                puerta.src = 'puerta-abierta.png';
+                puerta.classList.remove('oculta');
+                puerta.classList.add('abierta');
 
-                // Redirige después de un breve momento para ver la puerta abierta
                 setTimeout(function() {
                     window.location.href = 'snoopy.html'; 
-                }, 700); // Espera un poco para que se vea la puerta abierta
-            }, 500); // Espera a que la puerta cerrada se "oculte"
+                }, 700);
+            }, 500);
         });
     </script>
 
