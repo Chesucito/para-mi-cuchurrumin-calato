@@ -6,29 +6,52 @@
     <title>Snoopy | Futura Maestra</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Ajuste de fondo para esta sección: Blanco (como un cuaderno) con un toque */
         body {
-            background-color: var(--color-texto-claro); 
+            background-color: var(--color-fondo-claro-suave); /* Fondo blanco roto */
             color: var(--color-fondo-oscuro);
         }
-        /* Detalle extra (si no usas imagen, usa un emoji de perro o corazón) */
-        .snoopy-icon {
-            font-size: 4em;
+        .iconos-snoopy {
+            font-size: 5em;
             margin-bottom: 20px;
             color: var(--color-acento-morado);
+            display: flex;
+            gap: 15px;
+        }
+        .iconos-snoopy span {
+            filter: drop-shadow(0 0 5px rgba(128, 0, 128, 0.4)); /* Sombra para resaltar */
+        }
+        .cita-snoopy {
+            font-style: italic;
+            margin-top: 25px;
+            color: #666;
+            max-width: 500px;
+        }
+        .btn-navegacion {
+            background-color: #FFA07A; /* Un color más cálido para el botón */
+            border-color: var(--color-fondo-oscuro);
+            color: var(--color-fondo-oscuro);
+        }
+        .btn-navegacion:hover {
+            background-color: var(--color-fondo-oscuro);
+            color: #FFA07A;
+            border-color: #FFA07A;
         }
     </style>
 </head>
 <body>
 
     <div class="contenedor">
-        <div class="snoopy-icon">🐶</div>
+        <div class="iconos-snoopy">
+            <span>📚</span>
+            <span>🧸</span>
+            <span>✏️</span>
+        </div>
         
         <h1>La Reina de las Aulas y de Mi Corazón</h1>
         
-        <p>Tu amor por los niños y tu vocación por ser **Profesora de Inicial** es una de las cosas más hermosas y puras que tienes. Me encanta verte tan apasionada por tu sueño y sé que vas a ser la maestra más cariñosa del mundo.</p>
+        <p>Tu amor por los niños y tu vocación por ser **Profesora de Inicial** es una de las cosas más hermosas y puras que tienes. Me encanta verte tan apasionada por tu sueño y sé que vas a ser la maestra más cariñosa del mundo, con tu dulzura y tu infinita paciencia.</p>
         
-        <p>Como dijo **Snoopy**: "A veces la vida es dura, pero tú me enseñas a volar". Eres mi inspiración.</p>
+        <p class="cita-snoopy">"A veces la vida es dura, pero tú me enseñas a volar", como diría mi amigo **Snoopy**. Eres mi inspiración, mi ejemplo de entrega y cariño.</p>
         
         <a href="musica.html" class="btn-navegacion">Siguiente Nivel de Amor</a>
     </div>
