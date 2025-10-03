@@ -81,10 +81,9 @@
         }
 
         /* ------------------------------------- */
-        /* CSS Específico de index.html (Fondo de 3 Lirios Animado) */
+        /* CSS Específico de index.html (Fondo de 3 Lirios Animado y PEQUEÑO) */
         /* ------------------------------------- */
 
-        /* Aquí se define el fondo y la animación de movimiento */
         body::before {
             content: '';
             position: fixed;
@@ -93,15 +92,16 @@
             width: 200%; 
             height: 200%;
             z-index: 1; 
-            background-color: var(--color-fondo-oscuro); /* Base Negra */
+            background-color: var(--color-fondo-oscuro);
             
-            /* CLAVE: Las 3 imágenes se repiten en el fondo */
             background-image: url('lirio-1.png'), url('lirio-2.png'), url('lirio-3.png'); 
             background-repeat: repeat;
-            opacity: 0.2; /* Opacidad para que el texto sea muy legible */
-            background-size: 200px, 350px, 400px; /* Tamaños diferentes para variar el patrón */
+            opacity: 0.2; 
             
-            animation: moverFondo 90s linear infinite; /* Movimiento súper lento */
+            /* ¡CLAVE DEL CAMBIO! Lirios más pequeños: de 80px a 150px */
+            background-size: 80px, 120px, 150px; 
+            
+            animation: moverFondo 90s linear infinite; 
         }
         
         /* La animación que mueve el fondo */
