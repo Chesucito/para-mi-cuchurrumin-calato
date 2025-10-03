@@ -53,7 +53,7 @@
             padding: 15px 30px;
             margin-top: 40px;
             background-color: var(--color-acento-morado);
-            color: var(--color-texto-claro);
+            color: var(--color-texto-claro); /* Se mantiene blanco */
             text-decoration: none;
             border-radius: 5px;
             border: 3px solid var(--color-fondo-oscuro);
@@ -97,8 +97,6 @@
             background-image: url('lirio-1.png'), url('lirio-2.png'), url('lirio-3.png'); 
             background-repeat: repeat;
             opacity: 0.2; 
-            
-            /* ¡CLAVE DEL CAMBIO! Lirios más pequeños: de 80px a 150px */
             background-size: 80px, 120px, 150px; 
             
             animation: moverFondo 90s linear infinite; 
@@ -112,20 +110,28 @@
 
         /* Ajustes de color para que resalte sobre el fondo oscuro */
         h1 {
-            color: var(--color-texto-claro);
+            color: var(--color-texto-claro); /* Título CLARO con sombra MORADA */
             text-shadow: 0 0 10px var(--color-acento-morado);
         }
-        .bienvenida-texto {
-            color: #ccc;
+        .bienvenida-texto, .contenedor p {
+            color: var(--color-fondo-oscuro); /* Texto principal AHORA ES OSCURO */
             margin-bottom: 30px;
             font-size: 1.3em;
             max-width: 650px;
+        }
+        /* Corrigiendo el color del texto de la intro */
+        .bienvenida-texto {
+            color: var(--color-fondo-oscuro); /* Negro */
         }
         .intro-iconos {
             font-size: 5em;
             margin-bottom: 25px;
             color: var(--color-texto-claro);
             text-shadow: 0 0 15px var(--color-acento-morado);
+        }
+        /* El texto inferior, más sutil */
+        .contenedor p:last-child {
+            color: #555; 
         }
     </style>
 </head>
@@ -140,11 +146,11 @@
             Mi vida, esta es una pequeña colección de **detalles**, **sueños** y el **amor** que compartimos. Cada página es un pedacito de nuestro universo, con la elegancia de los **lirios** y toda la **música** que nos une.
         </p>
         
-        <p style="font-weight: bold; font-size: 1.1em; color: var(--color-texto-claro);">¿Estás lista para sumergirte en este viaje?</p>
+        <p style="font-weight: bold; font-size: 1.1em;">¿Estás lista para sumergirte en este viaje?</p>
         
         <a href="snoopy.html" class="btn-navegacion">Abre la Puerta a Nuestro Mundo</a>
         
-        <p style="margin-top: 50px; font-size: 0.8em; color: #aaa;">Hecho con todo mi cariño, para mi **cuchurrumin calato**.</p>
+        <p style="margin-top: 50px; font-size: 0.8em;">Hecho con todo mi cariño, para mi **cuchurrumin calato**.</p>
     </div>
 
 </body>
