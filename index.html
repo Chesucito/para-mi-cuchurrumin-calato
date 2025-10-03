@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para mi Cuchurrumin Calato &lt;3</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
         /* Paleta de Colores Base */
@@ -20,8 +20,8 @@
         /* CSS Base (Repetido en cada HTML) */
         /* ------------------------------------- */
         body {
-            /* CLAVE: Poppins como fuente base */
-            font-family: 'Poppins', sans-serif; 
+            /* CLAVE: Lora como fuente base y de títulos */
+            font-family: 'Lora', serif; 
             margin: 0;
             padding: 0;
             transition: background-color 0.8s ease, color 0.8s ease;
@@ -115,8 +115,9 @@
 
         /* Ajustes de color para que resalte sobre el fondo oscuro */
         h1 {
-            color: #4B0082;
-            text-shadow: 0 0 8px var(--color-texto-claro), 0 0 15px var(--color-acento-morado);
+            /* CLAVE: Regresamos al blanco pero con un brillo potente */
+            color: var(--color-texto-claro); 
+            text-shadow: 0 0 10px #FFD700, 0 0 20px var(--color-acento-morado), 0 0 30px var(--color-acento-morado); /* Neón Morado/Amarillo */
         }
         
         /* Contraste Máximo */
@@ -128,10 +129,10 @@
             max-width: 650px;
         }
 
-        /* Texto Cursivo (Dancing Script) */
+        /* CLAVE: Texto Cursivo (Charm) */
         .bienvenida-texto {
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.5em; 
+            font-family: 'Charm', cursive;
+            font-size: 1.8em; /* Más grande para que se aprecie el detalle */
             font-weight: 700;
         }
         
@@ -141,15 +142,15 @@
             text-shadow: none;
             margin-top: 15px;
             margin-bottom: 0;
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.1em;
+            font-family: 'Charm', cursive;
+            font-size: 1.3em; /* Más grande */
             font-weight: 700;
         }
         
-        /* Pregunta (Poppins) */
+        /* Pregunta (Lora) */
         .contenedor p:nth-last-child(2) {
             margin-bottom: 15px;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Lora', serif;
             font-weight: bold;
             font-size: 1em;
         }
